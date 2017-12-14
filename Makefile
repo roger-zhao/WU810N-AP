@@ -95,11 +95,12 @@ endif
 
 SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ | sed -e s/ppc/powerpc/ | sed -e s/armv.l/arm/)
 
-ARCH ?= $(SUBARCH)
-CROSS_COMPILE ?=
-KVER  := $(shell uname -r)
-KSRC ?= /lib/modules/$(KVER)/build
-MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless
+# ARCH ?= $(SUBARCH)
+# CROSS_COMPILE = arm-linux-gnueabihf-
+# KVER  := $(shell uname -r)
+# KSRC ?= /lib/modules/$(KVER)/build
+# MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless
+MODDESTDIR := 
 INSTALL_PREFIX :=
 
 ifneq ($(KERNELRELEASE),)
